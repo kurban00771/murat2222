@@ -3,7 +3,8 @@ const menu = document.querySelector('.menu__list');
 
 menuBtn.addEventListener('click', () => {
     menu.classList.toggle('menu--active');
-    menuBtn.classList.toggle('menu__btn--active'); // ← вот эта строка
+    menuBtn.classList.toggle('menu__btn--active'); 
+    document.body.classList.toggle('no-scroll');
 });
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -14,6 +15,11 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             target.scrollIntoView({
                 behavior: 'smooth'
             });
+        }
+        if (menu.classList.contains('menu--active')) {
+            menu.classList.remove('menu--active');
+            menuBtn.classList.remove('menu__btn--active');
+            document.body.classList.remove('no-scroll');
         }
     });
 });
