@@ -50,6 +50,10 @@ body {
   display: none;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 .container {
   max-width: 1440px;
   padding: 0 10px;
@@ -73,6 +77,10 @@ body {
 .menu__list {
   display: flex;
   gap: 0 30px;
+}
+
+.menu__item--cta {
+  display: none;
 }
 
 .menu__link {
@@ -776,21 +784,28 @@ iframe {
   }
 
   .menu__list {
-    position: absolute;
+    position: fixed;
+    top: 0;
     left: 0;
-    right: 0;
+    width: 100%;
+    height: 100vh;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     background-color: #fff;
-    padding: 95px 0;
     gap: 20px 0;
-    top: 0;
     transform: translateY(-100%);
     transition: transform .5s ease;
+    z-index: 4;
+    padding: 0;
   }
 
   .menu__list.menu--active {
     transform: translateY(0);
+  }
+
+  .menu__item--cta {
+    display: block;
   }
 }
 
@@ -983,13 +998,16 @@ iframe {
     margin-bottom: 30px;
   }
 
+  .about__stats-item {
+    width: 46%;
+  }
+
   .about__stats-item dt {
-    font-size: 30px;
-    letter-spacing: 3px;
+    font-size: 26px;
   }
 
   .about__stats-item dd {
-    letter-spacing: 3px;
+    font-size: 17px;
   }
 
   .about__progress-text {
