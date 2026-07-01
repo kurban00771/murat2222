@@ -26,16 +26,18 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 const emailLink = document.getElementById('email-link');
 if (emailLink) {
-    const emailUser = 'murat007';
-    const emailDomain = 'gmail.com';
-    const fullEmail = emailUser + '@' + emailDomain;
-    emailLink.href = 'mai'+ 'lto:' + fullEmail;
-    emailLink.textContent = fullEmail;
+    const decodedEmail = atob('bXVyYXQwMDdAZ21haWwuY29t');
+    
+    emailLink.href = 'mailto:' + decodedEmail;
+    emailLink.textContent = decodedEmail;
 }
 
 const phoneLink = document.getElementById('phone-link');
 if (phoneLink) {
-    const phone = '+79281007220';
-    phoneLink.href = 'tel:' + phone;
-    phoneLink.textContent = '+7 (928) 100-72-20';
+    const decodedPhoneLink = atob('Kzc5Mjg4MjI0MDQ5'); 
+    
+    const decodedPhoneText = atob('KzcgKDkyOCkgODIyIDQwIDQ5');
+
+    phoneLink.href = 'tel:' + decodedPhoneLink;
+    phoneLink.textContent = decodedPhoneText;
 }
