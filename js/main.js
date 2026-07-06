@@ -24,14 +24,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-const emailLink = document.getElementById('email-link');
-if (emailLink) {
-    const decodedEmail = atob('bXVyYXQwMDdAZ21haWwuY29t');
-    
-    emailLink.href = 'mailto:' + decodedEmail;
-    emailLink.textContent = decodedEmail;
-}
-
 const phoneLink = document.getElementById('phone-link');
 if (phoneLink) {
     const decodedPhoneLink = atob('Kzc5Mjg4MjI0MDQ5'); 
