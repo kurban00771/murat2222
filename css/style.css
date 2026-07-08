@@ -651,8 +651,26 @@ body {
     max-width: 500px;
   }
 
+  .blog__item-big .blog__item-text {
+    margin-bottom: 20px;
+  }
+
+  .blog__item-big,
+  .blog__item-small {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
   .blog__item-img {
     width: 100%;
+  }
+
+  /* .blog__item-img:first-child {
+    margin-bottom: 10px;
+  } */
+
+  .blog__items>div:not(:last-child) .blog__item-img {
+    margin-bottom: 10px;
   }
 
   .slogan__text {
@@ -673,7 +691,7 @@ body {
     position: relative;
     overflow: hidden;
     border-radius: 20px;
-    background-image: url(../images/img.jpg);
+    background-image: url(../images/img.webp);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -687,7 +705,7 @@ body {
     content: '';
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.17);
+    background: rgba(0, 0, 0, 0.31);
     border-radius: inherit;
     z-index: 1;
   }
@@ -887,58 +905,62 @@ body {
     margin-bottom: 85px;
   }
 
-  .about__title {
-    font-size: 62px;
+  .about__top::after {
+    background: rgb(0 0 0 / 23%);
   }
+}
 
-  .about__text {
-    font-size: 32px;
-  }
+.about__title {
+  font-size: 62px;
+}
 
-  .about__stats-item {
-    width: 100%;
-  }
+.about__text {
+  font-size: 32px;
+}
 
-  .blog__item-small {
-    gap: 20px;
-    flex-wrap: wrap;
-  }
+.about__stats-item {
+  width: 100%;
+}
 
-  .products__wrapper {
-    margin-bottom: 50px;
-  }
+.blog__item-small {
+  gap: 20px;
+  flex-wrap: wrap;
+}
 
-  .slogan {
-    margin-bottom: 50px;
-  }
+.products__wrapper {
+  margin-bottom: 50px;
+}
 
-  .slogan__img-block {
-    min-height: 400px;
-  }
+.slogan {
+  margin-bottom: 50px;
+}
 
-  .slogan__text {
-    font-size: 26px;
-  }
+.slogan__img-block {
+  min-height: 400px;
+}
 
-  .slogan__title {
-    font-size: 48px;
-  }
+.slogan__text {
+  font-size: 26px;
+}
 
-  .partners__box-text {
-    padding: 20px;
-  }
+.slogan__title {
+  font-size: 48px;
+}
 
-  .partners__box-top {
-    flex-wrap: wrap;
-  }
+.partners__box-text {
+  padding: 20px;
+}
 
-  .partners__box-top img {
-    width: 100%;
-  }
+.partners__box-top {
+  flex-wrap: wrap;
+}
 
-  .partners__box-list {
-    margin-top: 120px;
-  }
+.partners__box-top img {
+  width: 100%;
+}
+
+.partners__box-list {
+  margin-top: 120px;
 }
 
 @media (max-width: 560px) {
