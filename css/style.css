@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'Nunito Sans';
-  src: url('../fonts/NunitoSans-Variable.woff2') format('woff2-variations');
-  src: url('../fonts/NunitoSans-Variable.woff2') format('woff2') tech('variations');
+  src: url('../fonts/NunitoSans-Variable.woff2') format('woff2') tech('variations'),
+       url('../fonts/NunitoSans-Variable.woff2') format('woff2-variations');
   font-weight: 300 700;
 }
 
@@ -453,7 +453,6 @@ body {
 }
 
 .blog__item-img {
-
   border-radius: 10px;
 }
 
@@ -901,6 +900,7 @@ body {
 
   .about__stats {
     flex-wrap: wrap;
+    justify-content: space-around;
   }
 
   .products__list {
@@ -963,7 +963,7 @@ body {
   }
 
   .about__stats-item {
-    width: 100%;
+    width: 46%;
   }
 
   .blog__item-big .blog__item-text {
