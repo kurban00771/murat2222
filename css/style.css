@@ -74,6 +74,13 @@ body {
   font-weight: 500;
 }
 
+.mlogo {
+  display: block;
+  max-width: 180px;
+  width: auto;
+  height: auto;
+}
+
 .menu__list {
   display: flex;
   gap: 0 30px;
@@ -103,7 +110,7 @@ body {
 .about__top {
   text-align: center;
   color: #fdfdf0;
-  background-image: url(../images/about-bg.avif);
+  background-image: url(../images/hero-bg-desktop.avif);
   background-repeat: no-repeat;
   background-position: center center;
   text-transform: uppercase;
@@ -144,10 +151,16 @@ body {
 
 .about__achievement-imgbox {
   min-width: 214px;
+  width: 214px;
   position: relative;
+  overflow: hidden;
 }
 
 .about__achievement-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 142px;
   border-radius: 10px;
 }
 
@@ -226,6 +239,11 @@ body {
 }
 
 .about__progress-img {
+  display: block;
+  width: 100%;
+  max-width: 340px;
+  height: auto;
+  max-height: 445px;
   border-radius: 10px;
 }
 
@@ -414,6 +432,7 @@ body {
 
 .blog__item-big {
   grid-row: 1 / -1;
+  border-radius: 10px;
 }
 
 .blog__item-small {
@@ -433,12 +452,23 @@ body {
   margin-bottom: 32px;
 }
 
-.blog__item-big {
+.blog__item-img {
+
   border-radius: 10px;
 }
 
-.blog__item-img {
-  border-radius: 10px;
+.blog__item-img.blog__big {
+  display: block;
+  width: 100%;
+  max-width: 580px;
+  height: auto;
+  max-height: 276px;
+  object-fit: cover;
+}
+
+.blog__item-img.blog__small {
+  max-width: 320px;
+  max-height: 200px;
 }
 
 .blog__item-titlelink {
@@ -502,7 +532,7 @@ body {
 .partners__box-top::before {
   content: '';
   position: absolute;
-  background-image: url(../images/mlogo.avif);
+  background-image: url(../images/logo-mini.avif);
   width: 63px;
   height: 56px;
   top: 30px;
@@ -544,6 +574,12 @@ body {
 
 .partners__box-img {
   border-radius: 10px;
+}
+
+.partners__box-top img {
+  max-width: 340px;
+  height: 364px;
+  object-fit: cover;
 }
 
 .partners__box-text {
@@ -651,7 +687,7 @@ body {
     max-width: 500px;
   }
 
-  .blog__item-big .blog__item-text {
+  .blog__item-text {
     margin-bottom: 20px;
   }
 
@@ -661,16 +697,25 @@ body {
     flex-direction: column-reverse;
   }
 
+  .blog__item-small {
+    align-items: start;
+  }
+
+  .blog__item-img.blog__small {
+    max-width: 580px;
+    max-height: 276px;
+  }
+
   .blog__item-img {
     width: 100%;
   }
 
-  /* .blog__item-img:first-child {
-    margin-bottom: 10px;
-  } */
+  .blog__items>div:not(:last-child) .blog__item-img {
+    margin-bottom: 0;
+  }
 
-  .blog__items > div:not(:last-child) .blog__item-img {
-    margin-bottom: 10px;
+  .blog__item-big .blog__item-img {
+    margin-bottom: 0;
   }
 
   .slogan__text {
@@ -691,7 +736,7 @@ body {
     position: relative;
     overflow: hidden;
     border-radius: 20px;
-    background-image: url(../images/img.webp);
+    background-image: url(../images/hero-bg-mobile.avif);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -846,7 +891,7 @@ body {
   .about__progress-img {
     width: 100%;
     object-fit: cover;
-    height: 340px;
+    height: 445px;
     margin-bottom: 30px;
   }
 
@@ -921,6 +966,14 @@ body {
     width: 100%;
   }
 
+  .blog__item-big .blog__item-text {
+    margin-bottom: 20px;
+  }
+
+  .blog__item-text {
+    margin-bottom: 0;
+  }
+
   .blog__item-small {
     gap: 20px;
     flex-wrap: wrap;
@@ -955,11 +1008,23 @@ body {
   }
 
   .partners__box-top img {
+    max-width: none;
     width: 100%;
   }
 
   .partners__box-list {
     margin-top: 120px;
+  }
+}
+
+@media (max-width: 612px) {
+  .about__progress-img {
+    max-width: none;
+}
+
+  .products__list {
+    grid-template-columns: repeat(1, 1fr);
+    margin-bottom: 0;
   }
 }
 
@@ -987,10 +1052,6 @@ body {
     margin-bottom: 30px;
   }
 
-  .about__achievements {
-    flex-wrap: wrap;
-  }
-
   .about__title {
     font-size: 41px;
   }
@@ -999,16 +1060,17 @@ body {
     font-size: 20px;
   }
 
-  .about__achievement-img {
-    width: 70%;
+  .about__achievements {
+    margin-bottom: 30px;
+    flex-wrap: wrap;
   }
 
   .about__achievement-imgbox {
     min-width: 100%;
   }
 
-  .about__achievements {
-    margin-bottom: 30px;
+  .about__achievement-img {
+    width: 70%;
   }
 
   .about__stats {
@@ -1056,11 +1118,6 @@ body {
   .products__wrapper {
     padding: 30px 0;
     margin-bottom: 30px;
-  }
-
-  .products__list {
-    grid-template-columns: repeat(1, 1fr);
-    margin-bottom: 0;
   }
 
   .products__item-title {
