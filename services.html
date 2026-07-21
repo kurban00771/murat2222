@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/services.css">
+  <link rel="icon" type="image/svg+xml" href="images/favicon-car.svg" sizes="any">
+  <title>Услуги | Экскурсии по Кавказу с Муратом</title>
+</head>
+
+<body class="page-services" >
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="index.html" class="logo">
+          <img src="images/logo.avif" alt="Логотип" class="mlogo">
+        </a>
+        <nav class="menu">
+          <button class="menu__btn">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a href="index.html" class="menu__link">Главная</a>
+            </li>
+            <li class="menu__item">
+              <a href="services.html" class="menu__link text--bold" style="color: #f2a531;">Услуги</a>
+            </li>
+            <li class="menu__item">
+              <a href="index.html#products" class="menu__link">Маршруты</a>
+            </li>
+            <li class="menu__item">
+              <a href="index.html#atmosphere" class="menu__link">О нас</a>
+            </li>
+            <li class="menu__item menu__item--cta">
+              <a href="#footer" class="menu__link">Хочу в тур</a>
+            </li>
+          </ul>
+        </nav>
+        <a class="header__contacts" href="#footer">Хочу в тур</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <!-- Главный экран страницы услуг -->
+    <section class="about">
+      <div class="container-big">
+        <!-- Используем класс главного экрана, но можно заменить фоновое изображение через inline-стиль, если есть другая картинка -->
+        <div class="about__top" style="min-height: 500px; display: flex; flex-direction: column; justify-content: center;">
+          <h1 class="about__title" style="padding-top: 0; font-size: 100px;">
+            Наши Услуги
+          </h1>
+          <p class="about__text" style="font-size: 40px;">
+            Форматы ваших путешествий
+          </p>
+        </div>
+      </div>
+      
+      <div class="container" style="margin-top: 80px;">
+        <!-- Карточки услуг (используем сетку products) -->
+        <div class="products__inner">
+          <h2 class="products__title" style="text-align: left; margin-bottom: 30px;">
+            Выберите свой формат
+          </h2>
+          <div class="products__list">
+            <!-- Услуга 1 -->
+            <div class="products__item" style="background-image: url(images/individ.jpg);">
+              <h3 class="products__item-title">Индивидуальные туры</h3>
+              <p style="position: relative; z-index: 1; color: #fff; opacity: 0.9; margin-top: 10px;">
+                Маршрут строится только под вас. Едем в вашем темпе, останавливаемся там, где захотите. Максимум свободы.
+              </p>
+            </div>
+            <!-- Услуга 2 -->
+            <div class="products__item" style="background-image: url(images/group.jpg);">
+              <h3 class="products__item-title">Групповые экскурсии</h3>
+              <p style="position: relative; z-index: 1; color: #fff; opacity: 0.9; margin-top: 10px;">
+                Классические маршруты в компании единомышленников. Отличный баланс цены и впечатлений.
+              </p>
+            </div>
+            <!-- Услуга 3 -->
+            <div class="products__item" style="background-image: url(images/jeep.jpg);">
+              <h3 class="products__item-title">Джип-туры и экстрим</h3>
+              <p style="position: relative; z-index: 1; color: #fff; opacity: 0.9; margin-top: 10px;">
+                Заброски в труднодоступные ущелья, перевалы и бездорожье. Для тех, кто любит адреналин.
+              </p>
+            </div>
+            <!-- Услуга 4 -->
+            <div class="products__item" style="background-image: url(images/transf.jpg);">
+              <h3 class="products__item-title">Трансфер из аэропорта</h3>
+              <p style="position: relative; z-index: 1; color: #fff; opacity: 0.9; margin-top: 10px;">
+                Встреча в Минводах, комфортная доставка до отеля в Кисловодске, Пятигорске или горах.
+              </p>
+            </div>
+            <!-- Услуга 5 -->
+            <div class="products__item" style="background-image: url(images/photour.jpg);">
+              <h3 class="products__item-title">Фото-туры</h3>
+              <p style="position: relative; z-index: 1; color: #fff; opacity: 0.9; margin-top: 10px;">
+                Выезды на рассветы и закаты по самым "инстаграмным" локациям с запасом времени на съемку.
+              </p>
+            </div>
+            <!-- Услуга 6 -->
+            <div class="products__item" style="background-image: url(images/corp.jpg);">
+              <h3 class="products__item-title">Корпоративные выезды</h3>
+              <p style="position: relative; z-index: 1; color: #fff; opacity: 0.9; margin-top: 10px;">
+                Организация отдыха для команд. Тимбилдинг на природе, пикники в горах и большие маршруты.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Блок "Что включено" (используем логику таблиц из about) -->
+    <section class="about" style="margin-bottom: 100px;">
+      <div class="container">
+        <h2 class="products__title" style="text-align: left; margin-bottom: 40px;">
+          Детали организации
+        </h2>
+        <div class="about__progress-box">
+          <img src="images/detal.jpg" alt="" class="about__progress-img">
+          <div class="about__progress-tablebox">
+            <p class="about__progress-boxtext">
+              Независимо от выбранного формата, мы берем на себя все основные заботы. Ваша задача — просто наслаждаться видами и отдыхать.
+            </p>
+            <dl class="about__progress-table">
+              <div class="about__progress-item">
+                <dt><span>✓</span> Транспорт</dt>
+                <dd>Комфортные внедорожники (климат-контроль, чистый салон).</dd>
+              </div>
+              <div class="about__progress-item">
+                <dt><span>✓</span> Сопровождение</dt>
+                <dd>Услуги опытного гида-водителя на всем пути.</dd>
+              </div>
+              <div class="about__progress-item">
+                <dt><span>✓</span> Чай и перекус</dt>
+                <dd>Травяной горный чай и легкие угощения на остановках.</dd>
+              </div>
+              <div class="about__progress-item">
+                <dt><span>✗</span> Эко-сборы</dt>
+                <dd>Входы в нацпарки оплачиваются отдельно (уточняется при брони).</dd>
+              </div>
+              <div class="about__progress-item">
+                <dt><span>✗</span> Питание</dt>
+                <dd>Обеды в проверенных аутентичных кафе по маршруту.</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer__top">
+        <a href="index.html" class="footer__logo">
+          <img src="images/logo.avif" alt="Логотип" class="mlogo">
+        </a>
+        <div class="footer__element">
+          <p class="footer__element-title">Навигация</p>
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a href="index.html" class="footer__link">Главная</a>
+            </li>
+            <li class="footer__item">
+              <a href="services.html" class="footer__link">Услуги</a>
+            </li>
+            <li class="footer__item">
+              <a href="index.html#products" class="footer__link">Маршруты</a>
+            </li>
+            <li class="footer__item">
+              <a href="index.html#atmosphere" class="footer__link">О нас</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__element">
+          <p class="footer__element-title">Контакты</p>
+          <ul class="footer__list">
+            <li class="footer__item">
+              <address class="footer__item-address">Кисловодск, ул. Володарского, 14</address>
+            </li>
+            <li class="footer__item">
+              <!-- Скрипт из твоего js файла сам подтянет сюда номер -->
+              <a href="#" id="phone-link" class="footer__link">Показать телефон</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <ul class="footer__bottom">
+        <li class="footer__bottom-item">
+          <p class="footer__copy">2026 Мурат © Туры по Кавказу</p>
+        </li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>
