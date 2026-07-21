@@ -1,0 +1,51 @@
+/* =========================================
+   НОВЫЕ КЛАССЫ (их нет в style.css)
+========================================= */
+/* Если ты придумал новый блок специально для этой страницы */
+.services-card-description {
+  color: #fff;
+  opacity: 0.9;
+  margin-top: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+
+/* =========================================
+   ПЕРЕОПРЕДЕЛЕНИЕ СТАРЫХ КЛАССОВ 
+========================================= */
+/* 
+   Используем приставку .page-services перед классом.
+   Так браузер поймет: "Ага, изменить .about__top нужно ТОЛЬКО если он находится внутри .page-services"
+*/
+
+/* Делаем шапку на странице услуг меньше и убираем картинку с главной */
+.page-services .about__top {
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: none; /* Убираем фото гор с фона */
+  background-color: #1a1a1a; /* Ставим темный фон */
+  background-image: url(../images/backgroundfree.jpg);
+}
+
+/* Делаем заголовок чуть меньше, чем на главной */
+.page-services .about__title {
+  padding-top: 0;
+  font-size: 100px;
+}
+
+.page-services .about__text {
+  font-size: 40px;
+}
+
+/* Выравниваем заголовки блоков услуг по левому краю (на главной они по центру) */
+.page-services .products__title {
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.about__top {
+  background-image: (../);
+}
